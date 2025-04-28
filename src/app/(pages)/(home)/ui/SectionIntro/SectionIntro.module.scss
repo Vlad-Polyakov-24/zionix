@@ -1,0 +1,10 @@
+.intro {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__title {
+		font-size: var(--font-size-l);
+		line-height: var(--font-line-l);
+		text-align: center;
+	}
+}
