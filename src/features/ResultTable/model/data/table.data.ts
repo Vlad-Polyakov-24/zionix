@@ -1,0 +1,1 @@
+export const columns = ['Date', 'Time', 'Guess', 'Result'];

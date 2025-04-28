@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { ErrorBoundary } from '@globals/providers/ErrorBoundary';
 import { ThemeProvider } from '@globals/providers/MUIProvider';
+import { ReactQueryProvider } from '@globals/providers/ReactQuery';
 import '@globals/styles/index.scss';
 
 const roboto = Roboto({
@@ -25,15 +26,17 @@ interface IRootLayout {
 	children: ReactNode;
 }
 
-const RootLayout = async ({ children }: IRootLayout) => (
+const RootLayout = ({ children }: IRootLayout) => (
 	<html lang={'en'}>
 	<body className={roboto.variable}>
 	<AppRouterCacheProvider>
 		<ErrorBoundary>
-			<ThemeProvider>
-				{children}
-				<ToastContainer />
-			</ThemeProvider>
+			<ReactQueryProvider>
+				<ThemeProvider>
+					{children}
+					<ToastContainer />
+				</ThemeProvider>
+			</ReactQueryProvider>
 		</ErrorBoundary>
 	</AppRouterCacheProvider>
 	</body>

@@ -1,0 +1,15 @@
+.message {
+	font-size: var(--font-size-s);
+	line-height: var(--font-line-s);
+	color: var(--color-tomato);
+
+	&.left {
+		text-align: left;
+	}
+	&.center {
+		text-align: center;
+	}
+	&.right {
+		text-align: right;
+	}
+}

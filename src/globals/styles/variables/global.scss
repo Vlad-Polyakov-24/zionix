@@ -6,6 +6,10 @@
 
   --color-white: #fff;
   --color-black: #000;
+  --color-gray: #c1c1c1;
+  --color-tomato: tomato;
+  --color-red-dark: #C62828;
+  --color-green: #1B5E20;
   --color-overlay: rgba(0, 0, 0, .6);
 
   // shadows
@@ -42,4 +46,17 @@
 
   --container-width: 1140px;
   --container-gap: 15px;
+
+  // toasts
+
+  --toastify-toast-width: 600px;
+
+  // mobile
+
+  @media (width < breakpoints.$md) {
+
+    // toasts
+
+    --toastify-toast-width: 400px;
+  }
 }
